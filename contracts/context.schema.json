@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "城市文旅活动容量调度领域资料",
+  "type": "object",
+  "required": [
+    "domain",
+    "version",
+    "sample_id",
+    "actors",
+    "facts",
+    "constraints"
+  ],
+  "properties": {
+    "domain": {
+      "type": "string",
+      "const": "city-tourism-capacity"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sample_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actors": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
